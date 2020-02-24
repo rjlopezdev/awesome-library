@@ -78,10 +78,6 @@ const REPLACEMENT_RULES = {
         to: (target) => `${target}Module`,
       },
       {
-        from: 'library-name',
-        to: (target) => `${target}Module`
-      },
-      {
         from: (target) => `${camelize(target)}.module`,
         to: (target) => `${camelize(target)}.module`,
         file: {
@@ -113,11 +109,15 @@ const REPLACEMENT_RULES = {
           from: 'src/module/library-name.service.ts',
           to: (target) => `src/module/${camelize(target)}.service.ts`,
         }
+      },
+      {
+        from: () => 'library-name',
+        to: (target) => `${target}Module`
       }
     ]
   },
   NPM_VERSION: {
-    defaultOrigin: /"version": "1.*.*"/g,
+    defaultOrigin: /"version": "*.*.*"/g,
     transformationRules: [
       {
         to: () => `"version": "1.0.0"`

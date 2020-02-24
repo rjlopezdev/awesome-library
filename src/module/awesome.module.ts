@@ -1,29 +1,29 @@
 import { Module, DynamicModule } from '@nestjs/common';
-import { LibraryNameConfig, MODULE_CONFIG, DEFAULT_MODULE_CONFIG } from './config';
-import { LibraryNameService } from './library-name.service';
+import { AwesomeConfig, MODULE_CONFIG, DEFAULT_MODULE_CONFIG } from './config';
+import { AwesomeService } from './awesome.service';
 
 /**
  * LibraryName description
  */
 @Module({})
-export class LibraryNameModule {
+export class AwesomeModule {
 
   /**
    * Register the module
    * @param config configuration for module
    */
-  static register(config: LibraryNameConfig): DynamicModule {
+  static register(config: AwesomeConfig): DynamicModule {
     return {
-      module: LibraryNameModule,
+      module: AwesomeModule,
       providers: [
         {
           provide: MODULE_CONFIG,
           useValue: config || DEFAULT_MODULE_CONFIG
         },
-        LibraryNameService
+        AwesomeService
       ],
       exports: [
-        LibraryNameService
+        AwesomeService
       ]
     }
   }

@@ -1,20 +1,20 @@
 > :bulb: See [CONFIGURE_TEMPLATE.md](https://gist.github.com/rjlopezdev/f2c2ab0db522aad87c98fb1dc2e4ef14) to configure this template. Then, remove the file and this advise.
 
 <p align="center">
-  <img src="https://d33wubrfki0l68.cloudfront.net/49c2be6f2607b5c12dd27f8ecc8521723447975d/f05c5/logo-small.cbbeba89.svg" alt="Nest Library Starter" width="200" height="200">
+  <img src="https://d33wubrfki0l68.cloudfront.net/49c2be6f2607b5c12dd27f8ecc8521723447975d/f05c5/logo-small.cbbeba89.svg" alt="AwesomeLibrary" width="200" height="200">
 </p>
 
-<h1 align="center"> Nest Library Starter </h1>
+<h1 align="center"> AwesomeLibrary </h1>
 
 <p align="center">
   Minimal library description.
   <br>
   <br>
-  <img src="https://github.com/rjlopezdev/nestjs-lib-starter/workflows/Build%20Library%20and%20Schematics/badge.svg">
-  <img src="https://codecov.io/gh/rjlopezdev/nestjs-lib-starter/branch/master/graph/badge.svg" />
+  <img src="https://github.com/rjlopezdev/awesome-library/workflows/Build%20Library%20and%20Schematics/badge.svg">
+  <img src="https://codecov.io/gh/rjlopezdev/awesome-library/branch/master/graph/badge.svg" />
   <br>
   <br>
-  <img src="https://badge.fury.io/js/nestjs-library-starter.svg">
+  <img src="https://badge.fury.io/js/awesome-library.svg">
   <img src="https://img.shields.io/badge/maintainer-rjlopezdev-orange.svg?link=https://github.com/rjlopezdev">
   <img src="https://img.shields.io/badge/license-MIT-green.svg">
   <br>
@@ -27,7 +27,7 @@
   <a href="LICENSE"> License </a>
 </p>
 
-> :books: [See complete documentation](https://rjlopezdev.github.io/nestjs-lib-starter/)
+> :books: [See complete documentation](https://rjlopezdev.github.io/awesome-library/)
 
 An exhaustive description of the library.
 
@@ -36,19 +36,19 @@ An exhaustive description of the library.
 * [Installation](#installation)
 * [Setup](#setup)
 * [Usage](#usage)
-  * [LibraryNameService](#librarynameservice)
+  * [AwesomeService](#awesomeservice)
 * [Schematics](#schematics)
 
 # :package: Installation
 
 * :cat2: Using Nest CLI:
 ```
-nest add nestjs-library-starter
+nest add awesome-library
 ```
 
 * :package: Using Package Manager: 
 ```
-npm install --save nestjs-library-starter
+npm install --save awesome-library
 ```
 
 # :wrench: Setup
@@ -57,16 +57,16 @@ Explain your library setup.
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { LibraryNameModule, LibraryNameConfig } from 'nestjs-library-starter';
+import { AwesomeModule, AwesomeConfig } from 'awesome-library';
 
-const CONFIG: LibraryNameConfig = {
+const CONFIG: AwesomeConfig = {
   value: 'Awesome!'
 }
 
 @Module({
   imports: [
     ...
-    LibraryNameModule.register(CONFIG)
+    AwesomeModule.register(CONFIG)
   ],
   controllers: [ ... ],
   providers: [ ... ],
@@ -84,20 +84,20 @@ export class AppModule {}
 
 Explain your library usage.
 
-## LibraryNameService
+## AwesomeService
 
 A service with an awesome & helpul functionallity.
 
 | Method | Signature | Description |
 | --- | --- | --- |
-printConfig | __config__: `LibraryNameConfig` | Prints a provided _configuration_ |
+printConfig | __config__: `AwesomeConfig` | Prints a provided _configuration_ |
 
 # :art: Schematics
 
 Invoke Schematics using:
 
 ```
-nest g <schematic> [params] --collection nestjs-library-starter
+nest g <schematic> [params] --collection awesome-library
 ```
 
 ## demo

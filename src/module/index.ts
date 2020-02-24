@@ -1,6 +1,6 @@
 export {
-  MODULE_CONFIG, LibraryNameConfig,
+  MODULE_CONFIG, AwesomeConfig,
 } from './config'
 
-export { LibraryNameModule } from './library-name.module';
-export { LibraryNameService } from './library-name.service';
+export { AwesomeModule } from './awesome.module';
+export { AwesomeService } from './awesome.service';

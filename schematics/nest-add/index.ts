@@ -17,7 +17,7 @@ import { Path, join } from '@angular-devkit/core';
 
 export function nestAdd(options: NestAddOptions): Rule {
   return (tree: Tree, context: SchematicContext) => {
-    console.warn(`Nest Library Starter installed successfully via cli  ✅`);
+    console.warn(`AwesomeLibrary installed successfully via cli  ✅`);
     return branchAndMerge(
       chain([
         //@ts-ignore
@@ -33,9 +33,9 @@ function addDeclarationToModule(options: NestAddOptions): Rule {
   return (tree: Tree) => {
 
     // Name of the module to add
-    options.name = 'library-name';
+    options.name = 'AwesomeModule';
 
-    // [Search] Module to add to [imports|declarations|exports|providers] LibraryNameModule
+    // [Search] Module to add to [imports|declarations|exports|providers] AwesomeModule
     const moduleFinder: ModuleFinder = new ModuleFinder(tree);
     options.metadata = 'imports';
     options.staticOptions = {

@@ -1,6 +1,6 @@
 {
-  "name": "nestjs-library-starter",
-  "version": "1.12.0",
+  "name": "awesome-library",
+  "version": "1.0.0",
   "description": "A Project Template for Nest Libraries",
   "license": "MIT",
   "keywords": [
@@ -12,7 +12,7 @@
   ],
   "author": {
     "name": "rjlopezdev",
-    "email": "rjlopezdev@mail.com"
+    "email": "rjlopezdev@gmail.com"
   },
   "schematics": "./schematics/collection.json",
   "scripts": {
@@ -70,6 +70,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rjlopezdev/nestjs-lib-starter.git"
+    "url": "https://github.com/rjlopezdev/awesome-library.git"
   }
 }

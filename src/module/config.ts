@@ -6,7 +6,7 @@ export const MODULE_CONFIG = Symbol('MODULE_CONFIG');
 /**
  * Defines the available options to configure the Module
  */
-export interface LibraryNameConfig {
+export interface AwesomeConfig {
   /**
    * An awesome & powerful value
    */
@@ -16,6 +16,6 @@ export interface LibraryNameConfig {
 /**
  * Default Module configuration if is not provided
  */
-export const DEFAULT_MODULE_CONFIG: LibraryNameConfig = {
+export const DEFAULT_MODULE_CONFIG: AwesomeConfig = {
   value: '<DEFAULT>'
 };

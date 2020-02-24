@@ -1,18 +1,18 @@
 import { Injectable, Inject } from '@nestjs/common';
-import { MODULE_CONFIG, LibraryNameConfig } from './config';
+import { MODULE_CONFIG, AwesomeConfig } from './config';
 
 /**
  * Useful service
  */
 @Injectable()
-export class LibraryNameService {
+export class AwesomeService {
 
   /**
-   * Creates a new `LibraryNameService`
+   * Creates a new `AwesomeService`
    * @param config Provided configuration
    */
   constructor(
-    @Inject(MODULE_CONFIG) private config: LibraryNameConfig
+    @Inject(MODULE_CONFIG) private config: AwesomeConfig
   ) {}
 
   /**
