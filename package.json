@@ -1,0 +1,75 @@
+{
+  "name": "nestjs-library-starter",
+  "version": "1.12.0",
+  "description": "A Project Template for Nest Libraries",
+  "license": "MIT",
+  "keywords": [
+    "nestjs",
+    "library",
+    "starter",
+    "schematics",
+    "template"
+  ],
+  "author": {
+    "name": "rjlopezdev",
+    "email": "rjlopezdev@mail.com"
+  },
+  "schematics": "./schematics/collection.json",
+  "scripts": {
+    "build": "npm run build:lib && npm run build:schematics && ./tools/package.sh",
+    "build:lib": "npx tsc -p tsconfig.json",
+    "build:schematics": "npx tsc -p tsconfig.schematics.json",
+    "build:docs": "npx compodoc -p tsconfig.json && node tools/emoji-replacer.js",
+    "lint": "npm run lint:lib && npm run lint:schematics",
+    "lint:lib": "npx eslint 'src/**'",
+    "lint:schematics": "npx eslint 'schematics/**'",
+    "test": "jest",
+    "semantic-release": "semantic-release",
+    "serve:docs": "npx compodoc -p tsconfig.json --serve",
+    "postversion": "cp package.json ../package.json && cp package-lock.json ../package-lock.json"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "pre-push": "npm run test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@angular-devkit/core": "^9.0.2",
+    "@angular-devkit/schematics": "^9.0.2",
+    "@nestjs/common": "^6.11.7",
+    "@nestjs/core": "^6.11.7",
+    "@nestjs/schematics": "^6.9.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@compodoc/compodoc": "^1.1.11",
+    "@semantic-release/changelog": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "@types/jest": "^25.1.2",
+    "@types/node": "^13.7.1",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "commitizen": "^4.0.3",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "node-emoji": "^1.10.0",
+    "prettier": "^1.19.1",
+    "replace-in-file": "^5.0.2",
+    "semantic-release": "^17.0.4",
+    "ts-jest": "^25.2.0",
+    "typescript": "^3.7.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rjlopezdev/nestjs-lib-starter.git"
+  }
+}
