@@ -44,7 +44,7 @@
     "@angular-devkit/core": "^9.0.2",
     "@angular-devkit/schematics": "^9.0.2",
     "@nestjs/common": "^6.11.7",
-    "@nestjs/core": "^6.11.7",
+    "@nestjs/core": "^9.0.5",
     "@nestjs/schematics": "^6.9.4"
   },
   "devDependencies": {
